@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://publichealthacademy.it/sitemap.xml
+Sitemap: https://publichealthacademy.it.com/sitemap.xml
