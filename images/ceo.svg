@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#cfe9ff" />
+      <stop offset="1" stop-color="#9fcbe6" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <g transform="translate(200,140)">
+    <circle cx="0" cy="0" r="70" fill="#ffffff" opacity="0.9"/>
+    <rect x="-80" y="110" width="160" height="110" rx="12" fill="#ffffff" opacity="0.9"/>
+    <text x="0" y="5" fill="#083b66" font-family="Arial, Helvetica, sans-serif" font-size="28" text-anchor="middle">Photo</text>
+    <text x="0" y="40" fill="#083b66" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">Replace with real</text>
+  </g>
+</svg>
