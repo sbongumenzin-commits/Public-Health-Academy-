@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+<<<<<<< HEAD
 
 Sitemap: https://publichealthacademy.it.com/sitemap.xml
+=======
+Sitemap: https://publichealthacademy.netlify.app/sitemap.xml
+>>>>>>> origin/main

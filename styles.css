@@ -1,0 +1,119 @@
+
+body { font-family: Arial; margin: 0; padding: 0; }
+
+/* Live URL Banner */
+.live-url-banner { 
+  background: #f0f8ff; 
+  padding: 10px; 
+  text-align: center; 
+  font-size: 14px; 
+  border-bottom: 1px solid #ccc;
+  color: #083b66;
+}
+.live-url-banner a { 
+  color: #0066cc; 
+  font-weight: bold; 
+  text-decoration: none;
+}
+.live-url-banner a:hover { 
+  text-decoration: underline;
+}
+
+header { background: #083b66; color: white; padding: 18px 20px; }
+.header-inner { display: flex; align-items: center; gap: 18px; max-width: 1000px; margin: 0 auto; }
+.brand { flex: 0 0 auto; }
+.site-title { color: white; }
+.site-title h1 { margin: 0; font-size: 28px; }
+.site-title p { margin: 4px 0 0 0; opacity: 0.95; }
+.logo { max-width: 180px; width: auto; height: 60px; display: block; }
+section { padding: 20px; max-width: 900px; margin: auto; }
+h2 { color: #083b66; border-bottom: 2px solid #083b66; padding-bottom: 5px; }
+ul { line-height: 1.6; }
+
+/* CEO section layout */
+.ceo-inner { display: flex; gap: 20px; align-items: flex-start; margin-top: 10px; }
+.ceo-photo { width: 260px; max-width: 40%; border-radius: 50%; margin-bottom: 0; display: block; object-fit: cover; border: 4px solid #ffffff; box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
+.ceo-bio { flex: 1 1 auto; padding-top: 6px; }
+
+@media (max-width: 720px) {
+  .header-inner { flex-direction: column; text-align: center; gap: 10px; }
+  .logo { height: 72px; }
+  .ceo-inner { flex-direction: column; align-items: center; text-align: center; }
+  .ceo-photo { max-width: 60%; }
+  .ceo-bio { text-align: left; }
+}
+
+/* Events section */
+.events { background: #f9f9f9; }
+.event-card { 
+  background: white; 
+  border: 2px solid #083b66; 
+  border-radius: 12px; 
+  padding: 20px; 
+  margin-top: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.event-header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.event-header h3 { 
+  color: #083b66; 
+  margin: 0; 
+  font-size: 24px;
+}
+.cpd-badge { 
+  background: #083b66; 
+  color: white; 
+  padding: 6px 12px; 
+  border-radius: 20px; 
+  font-size: 14px; 
+  font-weight: bold;
+}
+.event-details { 
+  margin: 15px 0; 
+  line-height: 1.8;
+}
+.event-details p { 
+  margin: 8px 0;
+}
+.event-description ul { 
+  list-style: none; 
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 8px;
+}
+.event-description li:before { 
+  content: "✓ "; 
+  color: #083b66; 
+  font-weight: bold;
+}
+.event-actions { 
+  margin-top: 20px; 
+  text-align: center;
+}
+.register-btn { 
+  display: inline-block;
+  background: #083b66; 
+  color: white; 
+  padding: 12px 30px; 
+  border-radius: 6px; 
+  text-decoration: none; 
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+.register-btn:hover { 
+  background: #0a4d87;
+}
+
+@media (max-width: 720px) {
+  .event-description ul {
+    grid-template-columns: 1fr;
+  }
+}
