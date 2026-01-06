@@ -16,6 +16,19 @@
     @media(min-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
     footer{margin-top:28px;padding:18px 20px;background:#fafafa;border-top:1px solid #eee;text-align:center;font-size:14px;color:#666}
     .contact{margin-top:8px}
+    .events-list{list-style:none;padding:0;margin:12px 0}
+    .events-list li{margin-bottom:12px}
+    /* Event card styling */
+    .event-card{background:#f8fdfd;border:1px solid #e6f0ef;padding:18px;border-radius:10px;margin-top:12px}
+    .event-card h4{margin:0 0 8px;color:#064554}
+    .event-card .meta{display:grid;grid-template-columns:1fr;gap:6px;font-size:0.95em;color:#134e4a}
+    @media(min-width:720px){.event-card .meta{grid-template-columns:repeat(2,1fr)}}
+    .bank{background:#fff;border:1px solid #e0eceb;padding:10px;border-radius:8px;margin-top:10px;font-size:0.95em}
+    .invited ul{margin:6px 0 0 18px;padding:0}
+    .actions{margin-top:12px}
+    .register-btn{display:inline-block;background:#0b6;color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;font-weight:600}
+    .register-btn:hover{background:#095f4d}
+    .last-updated{margin-top:10px;font-size:0.85em;color:#666}
   </style>
 </head>
 <body>
@@ -50,8 +63,49 @@
       </div>
 
       <h3 class="contact">Contact Us</h3>
-      <p>Email: <a href="mailto:sbongumenzin.n@gmail.com">sbongumenzin.n@gmail.com</a></p>
+      <p>Email: <a href="mailto:info@publichealthacademy.com">info@publichealthacademy.com</a></p>
       <p>Phone: <a href="tel:+27768129564">076 812 9564</a></p>
+      
+      <h3 class="upcoming">Upcoming Events</h3>
+      <div class="event-card" id="upcoming-symposium">
+        <h4>Public Health CPD-Accredited Symposium</h4>
+        <div class="meta">
+          <div><strong>Date:</strong> 20 - 22 April 2026</div>
+          <div><strong>Time:</strong> 8:00 AM – 4:30 PM (daily)</div>
+          <div><strong>Location:</strong> Virtual (Zoom)</div>
+          <div><strong>CPD Points:</strong> 20</div>
+          <div><strong>Registration fee:</strong> R480</div>
+        </div>
+
+        <div class="bank">
+          <strong>Bank details</strong>
+          <div style="margin-top:6px">
+            Bank: Standard Bank<br>
+            Account Name: Public Health Academy<br>
+            Account Number: 10260524725<br>
+            Branch Code: 018505
+          </div>
+        </div>
+
+        <div class="invited" style="margin-top:10px">
+          <strong>Inviting professionals in:</strong>
+          <ul>
+            <li>Environmental Health</li>
+            <li>Medicine</li>
+            <li>Dietetics</li>
+            <li>Occupational Therapy</li>
+            <li>Psychology</li>
+            <li>Social Work</li>
+          </ul>
+        </div>
+
+        <div class="actions">
+          <a class="register-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe43s75t2XS_93xD8Go0FjfRjGsCLzwYwm1sFcuiuOG9X577Q/viewform?usp=header" target="_blank" rel="noopener">Register / Enquire</a>
+          <span style="margin-left:10px;font-size:0.95em;color:#333;">(Please pay R480 via bank transfer and include your name as reference.)</span>
+        </div>
+
+        <div class="last-updated">Last updated: 6 January 2026</div>
+      </div>
     </div>
 
     <footer>
