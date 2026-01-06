@@ -12,6 +12,19 @@
   <meta name="google-site-verification" content="dkUMleA-MJjbW9YDvvCyMBsJVzZ4VGL8irDAFBPEJHo" />
   <link rel="canonical" href="https://publichealthacademy.netlify.app/">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Poster-inspired colors and icon sizing */
+    .cpd-badge{background:#1f6365;color:#fff;padding:6px 8px;border-radius:6px;font-weight:700}
+    .event-card{border-left:4px solid #1f6365;padding:16px}
+    .event-details p{margin:6px 0}
+    .event-header h3{margin:0}
+    .meta-icon{width:18px;height:18px;vertical-align:middle;margin-right:8px;fill:#06504f}
+    .register-btn{background:#0b6;color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none}
+    @media(max-width:600px){
+      .event-card{padding:12px}
+      .event-details{font-size:0.95em}
+    }
+  </style>
 </head>
 <body>
 
@@ -71,16 +84,16 @@
 <section class="events">
   <h2>Upcoming Events</h2>
   <div class="event-card">
-    <div class="event-header">
-      <h3>Public Health CPD-Accredited Symposium</h3>
-      <span class="cpd-badge">20 CPD Points</span>
-    </div>
-    <div class="event-details">
-      <p><strong>📅 Date:</strong> 20 - 22 of April 2026</p>
-      <p><strong>🕐 Time:</strong> 8:00 AM - 4:30 PM (daily)</p>
-      <p><strong>📍 Location:</strong> Virtual (Zoom)</p>
-      <p><strong>💰 Registration Fee:</strong> R480</p>
-    </div>
+      <div class="event-header">
+        <h3>Public Health CPD-Accredited Symposium</h3>
+        <span class="cpd-badge">20 CPD Points</span>
+      </div>
+      <div class="event-details">
+        <p><svg class="meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10h10v2H7zM7 6h10v2H7zM7 14h6v2H7z"/></svg><strong>Date:</strong> 20 - 22 April 2026</p>
+        <p><svg class="meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8V12L14.5 13.75L15.25 12.5L13 11.25V8zM19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM19 19H5V5h14v14z"/></svg><strong>Time:</strong> 8:00 AM - 4:30 PM (daily)</p>
+        <p><svg class="meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5 2.5 2.5 0 0112 11.5z"/></svg><strong>Location:</strong> Virtual (Zoom)</p>
+        <p><svg class="meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6z"/></svg><strong>Registration Fee:</strong> R480</p>
+      </div>
     <div class="event-description">
       <p><strong>Inviting Professionals In:</strong></p>
       <ul>
@@ -105,8 +118,21 @@
     <div class="event-actions">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSe43s75t2XS_93xD8Go0FjfRjGsCLzwYwm1sFcuiuOG9X577Q/viewform?usp=header" target="_blank" class="register-btn">Register / Enquire</a>
       <span style="margin-left:12px;font-size:0.95em">(Please pay R480 via bank transfer and include your name as reference.)</span>
+      <div style="margin-top:8px;font-size:0.95em;color:#444">
+        Tip: You can set your Google Form to redirect to <a href="/thank-you.html" target="_blank">/thank-you.html</a> after submission to show a confirmation page.
+      </div>
     </div>
-    <div class="last-updated">Last updated: 6 January 2026</div>
+    <div class="last-updated">Last updated: <span id="lastUpdated">6 January 2026</span></div>
+    <script>
+      // Set a dynamic last-updated date at page load (client local date)
+      (function(){
+        var el = document.getElementById('lastUpdated');
+        if(!el) return;
+        var now = new Date();
+        var opts = { year:'numeric', month:'long', day:'numeric' };
+        el.textContent = now.toLocaleDateString('en-GB', opts);
+      })();
+    </script>
   </div>
 </section>
 
