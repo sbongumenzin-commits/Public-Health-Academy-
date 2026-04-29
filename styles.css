@@ -131,21 +131,20 @@ ul { line-height: 1.6; }
   margin-top: 18px;
   box-shadow: 0 5px 16px rgba(0,0,0,0.1);
 }
+.assessment { background: #eef6ff; }
+.assessment-card {
+  background: white;
+  border: 2px solid #083b66;
+  border-radius: 12px;
+  padding: 22px;
+  margin-top: 18px;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.1);
+}
 .cpd-card ul,
 .cpd-card ol {
   margin: 14px 0;
   padding-left: 20px;
   line-height: 1.8;
-}
-.presentation-list ul {
-  margin: 8px 0 0 0;
-  padding-left: 18px;
-  line-height: 1.7;
-  max-height: 380px;
-  overflow-y: auto;
-}
-.presentation-list li {
-  margin-bottom: 8px;
 }
 .cpd-card ul { list-style: disc; }
 .cpd-actions { text-align: center; margin-top: 20px; }
