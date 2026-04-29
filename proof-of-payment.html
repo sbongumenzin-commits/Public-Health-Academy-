@@ -29,8 +29,11 @@
   <h2>Upload Proof of Payment</h2>
   <div class="assessment-card">
     <p>Submit your proof of payment for the R480 CPD assessment. Once verified, you will receive a unique access code by email.</p>
-    <form name="pop-upload" method="POST" data-netlify="true" enctype="multipart/form-data" class="pop-form">
+    <form name="pop-upload" method="POST" data-netlify="true" action="/proof-of-payment-success.html" enctype="multipart/form-data" class="pop-form">
       <input type="hidden" name="form-name" value="pop-upload">
+      <p hidden>
+        <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+      </p>
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required>
       <label for="email">Email address</label>
