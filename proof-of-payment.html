@@ -29,7 +29,7 @@
   <h2>Upload Proof of Payment</h2>
   <div class="assessment-card">
     <p>Submit your proof of payment for the R480 CPD assessment. Once verified, you will receive a unique access code by email.</p>
-    <form name="pop-upload" method="POST" data-netlify="true" action="/proof-of-payment-success.html" enctype="multipart/form-data" class="pop-form">
+    <form id="pop-form" name="pop-upload" method="POST" data-netlify="true" enctype="multipart/form-data" class="pop-form">
       <input type="hidden" name="form-name" value="pop-upload">
       <p hidden>
         <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
@@ -49,6 +49,7 @@
       <label for="notes">Notes</label>
       <textarea id="notes" name="notes" rows="4" placeholder="Optional: include the bank reference and practitioner details."></textarea>
       <button type="submit" class="unlock-btn">Submit Proof of Payment</button>
+      <p id="form-message" class="note"></p>
     </form>
     <p class="note">If you have questions, email <a href="mailto:sbongumenzi.n@gmail.com">sbongumenzi.n@gmail.com</a>.</p>
     <div class="cpd-actions">
@@ -56,6 +57,40 @@
     </div>
   </div>
 </section>
+
+  <script>
+    const popForm = document.getElementById('pop-form');
+    const formMessage = document.getElementById('form-message');
+
+    function generateAccessCode() {
+      const prefix = 'PHA';
+      const random = Math.floor(1000 + Math.random() * 9000);
+      return `${prefix}-${random}`;
+    }
+
+    popForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      formMessage.textContent = 'Submitting your proof of payment...';
+      const formData = new FormData(popForm);
+      const accessCode = generateAccessCode();
+      formData.append('access_code', accessCode);
+      fetch('/', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => {
+          if (response.ok) {
+            window.location.href = `proof-of-payment-success.html?code=${accessCode}`;
+          } else {
+            throw new Error('Submission failed.');
+          }
+        })
+        .catch((error) => {
+          formMessage.textContent = 'There was a problem submitting your proof of payment. Please try again.';
+          console.error(error);
+        });
+    });
+  </script>
 
 </body>
 </html>

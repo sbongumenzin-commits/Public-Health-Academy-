@@ -29,13 +29,25 @@
   <h2>Submission Received</h2>
   <div class="assessment-card">
     <p>Thank you for submitting your proof of payment for the R480 assessment.</p>
-    <p>We will verify your payment and email you a unique access code within 24 hours.</p>
-    <p>Once your code has been sent, return to the <a href="assessment.html">assessment session</a> and enter it to unlock your assessment.</p>
+    <p>Your access code has been generated automatically:</p>
+    <p><strong id="display-code">Loading code...</strong></p>
+    <p>Copy the code above, then return to the <a href="assessment.html">assessment session</a> and enter it to unlock your assessment.</p>
     <div class="cpd-actions">
       <a href="index.html" class="register-btn">Back to Home</a>
     </div>
   </div>
 </section>
+
+<script>
+  const query = new URLSearchParams(window.location.search);
+  const code = query.get('code');
+  const display = document.getElementById('display-code');
+  if (code) {
+    display.textContent = code;
+  } else {
+    display.textContent = 'No access code was found. Please return to the upload page and resubmit.';
+  }
+</script>
 
 </body>
 </html>
