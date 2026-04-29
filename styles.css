@@ -112,6 +112,56 @@ ul { line-height: 1.6; }
   background: #0a4d87;
 }
 
+.cpd-resources { background: #eef6ff; }
+.cpd-card { 
+  background: white; 
+  border: 2px solid #083b66; 
+  border-radius: 12px; 
+  padding: 22px; 
+  margin-top: 18px;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.1);
+}
+
+.presentations { background: #fff; }
+.presentation-card { 
+  background: white; 
+  border: 2px solid #083b66; 
+  border-radius: 12px; 
+  padding: 22px; 
+  margin-top: 18px;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.1);
+}
+.cpd-card ul,
+.cpd-card ol {
+  margin: 14px 0;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+.presentation-list ul {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+  line-height: 1.7;
+  max-height: 380px;
+  overflow-y: auto;
+}
+.presentation-list li {
+  margin-bottom: 8px;
+}
+.cpd-card ul { list-style: disc; }
+.cpd-actions { text-align: center; margin-top: 20px; }
+.unlock-btn { 
+  display: inline-block;
+  background: #0a4d87;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.unlock-btn:hover { background: #085188; }
+.note { margin-top: 18px; color: #333; opacity: 0.88; }
+
 @media (max-width: 720px) {
   .event-description ul {
     grid-template-columns: 1fr;
