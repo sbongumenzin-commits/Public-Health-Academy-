@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Public Health Academy - Proof of Payment</title>
+<meta name="description" content="Upload proof of payment for CPD assessment access.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="live-url-banner">
+  🌐 Live at: <a href="https://publichealthacademy.netlify.app" target="_blank">publichealthacademy.netlify.app</a>
+</div>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <img src="images/logo-optimized.png" class="logo" alt="Public Health Academy logo">
+    </div>
+    <div class="site-title">
+      <h1>Public Health Academy</h1>
+      <p>Proof of Payment</p>
+    </div>
+  </div>
+</header>
+
+<section class="assessment">
+  <h2>Upload Proof of Payment</h2>
+  <div class="assessment-card">
+    <p>Submit your proof of payment for the R480 CPD assessment. Once verified, you will receive a unique access code by email.</p>
+    <form name="pop-upload" method="POST" data-netlify="true" enctype="multipart/form-data" class="pop-form">
+      <input type="hidden" name="form-name" value="pop-upload">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" required>
+      <label for="practitioner-number">Practitioner Number</label>
+      <input type="text" id="practitioner-number" name="practitioner_number" required>
+      <label for="payment-date">Payment Date</label>
+      <input type="date" id="payment-date" name="payment_date" required>
+      <label for="amount">Amount Paid</label>
+      <input type="text" id="amount" name="amount" value="R480" required>
+      <label for="pop-file">Upload Proof of Payment (PDF or image)</label>
+      <input type="file" id="pop-file" name="pop_file" accept="image/*,.pdf" required>
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Optional: include the bank reference and practitioner details."></textarea>
+      <button type="submit" class="unlock-btn">Submit Proof of Payment</button>
+    </form>
+    <p class="note">If you have questions, email <a href="mailto:sbongumenzi.n@gmail.com">sbongumenzi.n@gmail.com</a>.</p>
+    <div class="cpd-actions">
+      <a href="index.html" class="register-btn">Back to Home</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

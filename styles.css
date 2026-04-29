@@ -161,6 +161,39 @@ ul { line-height: 1.6; }
 .unlock-btn:hover { background: #085188; }
 .note { margin-top: 18px; color: #333; opacity: 0.88; }
 
+.pop-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+.pop-form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.pop-form input,
+.pop-form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+}
+.pop-form textarea {
+  resize: vertical;
+}
+.pop-form button {
+  width: fit-content;
+}
+#access-code {
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 12px;
+  font-size: 16px;
+}
+
 @media (max-width: 720px) {
   .event-description ul {
     grid-template-columns: 1fr;
