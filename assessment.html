@@ -42,52 +42,62 @@
     <div id="assessment-session" style="display:none;">
       <p>Welcome to the assessment session. Please write your answers below and submit them by email when complete.</p>
       <form id="assessment-form">
-        <ol>
-        <p class="note">When finished, email your completed answers to <a href="mailto:sbongumenzi.n@gmail.com?subject=Completed%20CPD%20Assessment%20Answers">sbongumenzi.n@gmail.com</a>.</p>
-        <div class="cpd-actions">
-          <a href="mailto:sbongumenzi.n@gmail.com?subject=Completed%20CPD%20Assessment%20Answers" class="register-btn">Email Completed Answers</a>
-        </div>
+        <p class="note">When finished, click Submit Answers below. Your responses will be checked automatically. You have 3 attempts to achieve at least 60%.</p>
+        <ol id="questions-list">
           <li>
             <p>From the symposium materials, identify one practical strategy to improve environmental health in a local community and explain why it is effective.</p>
             <textarea name="q1" rows="4" placeholder="Your answer..."></textarea>
+            <div class="feedback" id="feedback-q1"></div>
           </li>
           <li>
             <p>Describe how a multisectoral approach can strengthen public health outcomes, using one example from the symposium topics.</p>
             <textarea name="q2" rows="4" placeholder="Your answer..."></textarea>
+            <div class="feedback" id="feedback-q2"></div>
           </li>
           <li>
             <p>List two ethical considerations that should be applied when designing public health support services for vulnerable populations.</p>
             <textarea name="q3" rows="4" placeholder="Your answer..."></textarea>
+            <div class="feedback" id="feedback-q3"></div>
           </li>
           <li>
             <p>Explain how mental health promotion can be integrated into preventive care, and name one benefit for community wellbeing.</p>
             <textarea name="q4" rows="4" placeholder="Your answer..."></textarea>
+            <div class="feedback" id="feedback-q4"></div>
           </li>
           <li>
             <p>Outline one method for bridging the gap between prevention and care in public health programming.</p>
             <textarea name="q5" rows="4" placeholder="Your answer..."></textarea>
+            <div class="feedback" id="feedback-q5"></div>
           </li>
           <li>
             <p>Discuss the role of community engagement in effective public health interventions.</p>
             <textarea name="q6" rows="4" placeholder="Your answer..."></textarea>
+            <div class="feedback" id="feedback-q6"></div>
           </li>
           <li>
             <p>Explain the importance of data-driven decision making in environmental health practices.</p>
             <textarea name="q7" rows="4" placeholder="Your answer..."></textarea>
+            <div class="feedback" id="feedback-q7"></div>
           </li>
           <li>
             <p>Describe one strategy to address health inequalities in underserved communities.</p>
             <textarea name="q8" rows="4" placeholder="Your answer..."></textarea>
+            <div class="feedback" id="feedback-q8"></div>
           </li>
           <li>
             <p>How can healthcare professionals integrate ethical principles into daily practice?</p>
             <textarea name="q9" rows="4" placeholder="Your answer..."></textarea>
+            <div class="feedback" id="feedback-q9"></div>
           </li>
           <li>
             <p>Identify one emerging trend in public health and its potential impact on healthcare delivery.</p>
             <textarea name="q10" rows="4" placeholder="Your answer..."></textarea>
+            <div class="feedback" id="feedback-q10"></div>
           </li>
         </ol>
+        <button type="submit" class="register-btn">Submit Answers</button>
+        <p id="result-message" class="note"></p>
+        <p id="attempts-message" class="note"></p>
       </form>
       <p class="note">When finished, email your completed answers to <a href="mailto:sbongumenzi.n@gmail.com?subject=Completed%20CPD%20Assessment%20Answers">sbongumenzi.n@gmail.com</a>.</p>
       <div class="cpd-actions">
@@ -113,6 +123,104 @@
   const accessMessage = document.getElementById('access-message');
   const accessBlock = document.getElementById('access-block');
   const assessmentSession = document.getElementById('assessment-session');
+
+  const assessmentForm = document.getElementById('assessment-form');
+  const resultMessage = document.getElementById('result-message');
+  const attemptsMessage = document.getElementById('attempts-message');
+  const maxAttempts = 3;
+  const passPercent = 60;
+  const questionData = [
+    { id: 'q1', keywords: ['waste', 'sanitation', 'clean', 'water', 'hygiene'], sample: 'A good response mentions improving sanitation, safe waste disposal, clean water access, or community hygiene education.' },
+    { id: 'q2', keywords: ['education', 'coordination', 'government', 'community', 'cross-sector', 'sector'], sample: 'A strong answer describes health outcomes improving when health, education, government, and community stakeholders work together.' },
+    { id: 'q3', keywords: ['consent', 'dignity', 'equity', 'confidentiality', 'justice', 'fairness'], sample: 'List ethical considerations such as consent, dignity, equity, confidentiality, and justice in service design.' },
+    { id: 'q4', keywords: ['prevention', 'awareness', 'support', 'early', 'wellbeing', 'promotion'], sample: 'Good answers mention awareness, prevention, early support, and the benefit of improved wellbeing.' },
+    { id: 'q5', keywords: ['referral', 'continuum', 'integration', 'link', 'coordination', 'follow-up'], sample: 'One method is creating an integrated referral system that links prevention, early detection, and care services.' },
+    { id: 'q6', keywords: ['community', 'participation', 'ownership', 'collaboration', 'engagement', 'feedback'], sample: 'Community engagement means involving people in planning, decision-making, and ownership of public health initiatives.' },
+    { id: 'q7', keywords: ['data', 'surveillance', 'monitoring', 'evidence', 'analysis', 'information'], sample: 'Explain that data-driven decisions rely on surveillance, monitoring, evidence, and analysis to guide health actions.' },
+    { id: 'q8', keywords: ['equity', 'access', 'targeted', 'outreach', 'underserved', 'empowerment'], sample: 'A strategy can be targeted outreach, improving access, and designing services that promote equity for underserved groups.' },
+    { id: 'q9', keywords: ['respect', 'compassion', 'integrity', 'responsibility', 'accountability', 'ethics'], sample: 'Healthcare professionals integrate ethics by showing respect, compassion, integrity, accountability, and fair treatment every day.' },
+    { id: 'q10', keywords: ['telehealth', 'digital', 'climate', 'pandemic', 'technology', 'mental health'], sample: 'Mention an emerging trend like telehealth, digital health, climate health, or mental health and its effect on delivery.' }
+  ];
+
+  function normalizeAnswer(answer) {
+    return answer.trim().toLowerCase();
+  }
+
+  function toggleAssessmentForm(isEnabled) {
+    const textareas = assessmentForm.querySelectorAll('textarea');
+    const submitButton = assessmentForm.querySelector('button[type="submit"]');
+    textareas.forEach((textarea) => textarea.disabled = !isEnabled);
+    submitButton.disabled = !isEnabled;
+  }
+
+  function showFeedback(questionId, isCorrect, sampleAnswer) {
+    const feedbackEl = document.getElementById(`feedback-${questionId}`);
+    if (!feedbackEl) return;
+    if (isCorrect) {
+      feedbackEl.textContent = 'Correct answer. Good work.';
+      feedbackEl.style.color = '#0b6';
+    } else {
+      feedbackEl.textContent = `Incorrect answer. ${sampleAnswer}`;
+      feedbackEl.style.color = '#b22222';
+    }
+  }
+
+  function gradeAssessment() {
+    let score = 0;
+    questionData.forEach((question) => {
+      const textarea = assessmentForm.querySelector(`textarea[name="${question.id}"]`);
+      const answerText = normalizeAnswer(textarea ? textarea.value : '');
+      const isCorrect = question.keywords.some((keyword) => answerText.includes(keyword));
+      if (isCorrect) score += 1;
+      showFeedback(question.id, isCorrect, question.sample);
+    });
+    return score;
+  }
+
+  function updateResult(score, attempts) {
+    const percent = Math.round((score / questionData.length) * 100);
+    const passed = percent >= passPercent;
+    resultMessage.textContent = `Score: ${score} / ${questionData.length} (${percent}%). ${passed ? 'You have passed the assessment.' : 'You did not pass yet.'}`;
+    resultMessage.style.color = passed ? '#0b6' : '#b22222';
+    attemptsMessage.textContent = `Attempt ${attempts} of ${maxAttempts}. ${passed ? 'You may now proceed.' : attempts < maxAttempts ? 'Try again to reach 60%.' : 'No more attempts available.'}`;
+    if (passed) {
+      localStorage.setItem('assessmentPassed', 'true');
+      toggleAssessmentForm(false);
+    } else if (attempts >= maxAttempts) {
+      toggleAssessmentForm(false);
+    }
+  }
+
+  function checkAttemptStatus() {
+    const attempts = parseInt(localStorage.getItem('assessmentAttempts') || '0', 10);
+    const passed = localStorage.getItem('assessmentPassed') === 'true';
+    if (passed) {
+      resultMessage.textContent = 'You have already passed this assessment. Well done!';
+      resultMessage.style.color = '#0b6';
+      attemptsMessage.textContent = `Attempts used: ${attempts} / ${maxAttempts}`;
+      toggleAssessmentForm(false);
+      return;
+    }
+    if (attempts >= maxAttempts) {
+      resultMessage.textContent = 'You have reached the maximum of 3 attempts. Please contact the academy if you need another chance.';
+      resultMessage.style.color = '#b22222';
+      attemptsMessage.textContent = `Attempts used: ${attempts} / ${maxAttempts}`;
+      toggleAssessmentForm(false);
+      return;
+    }
+    attemptsMessage.textContent = `Attempts used: ${attempts} / ${maxAttempts} — you need ${passPercent}% to pass.`;
+  }
+
+  if (assessmentForm) {
+    checkAttemptStatus();
+    assessmentForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const currentAttempts = parseInt(localStorage.getItem('assessmentAttempts') || '0', 10) + 1;
+      localStorage.setItem('assessmentAttempts', String(currentAttempts));
+      const score = gradeAssessment();
+      updateResult(score, currentAttempts);
+    });
+  }
 
   unlockBtn.addEventListener('click', () => {
     const code = accessCodeInput.value.trim();
