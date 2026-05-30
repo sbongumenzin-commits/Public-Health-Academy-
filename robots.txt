@@ -4,5 +4,5 @@ Allow: /
 
 Sitemap: https://publichealthacademy.it.com/sitemap.xml
 =======
-Sitemap: https://publichealthacademy.netlify.app/sitemap.xml
+Sitemap: https://publichealthacademy.com/sitemap.xml
 >>>>>>> origin/main
