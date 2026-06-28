@@ -2,6 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Public Health Academy</title>
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b2735;background:#f5f8fb}
+    header{background:#08283d;color:#fff;padding:32px 20px;text-align:center}
+    header h1{margin:0;font-size:2rem;letter-spacing:0.05em}
+    header p{margin:10px 0 0;font-size:1rem;opacity:.9}
+    main{max-width:1100px;margin:0 auto;padding:20px}
+    .hero{background:#fff;border-radius:18px;box-shadow:0 18px 40px rgba(0,0,0,.08);overflow:hidden;margin-bottom:24px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:0;align-items:center}
+    .hero-left{padding:30px 28px}
+    .hero-left h2{margin-top:0;font-size:1.7rem;color:#0c1f36}
+    .hero-left p{margin:18px 0 0;line-height:1.75;color:#233a4e}
+    .badge{display:inline-block;background:#dd1b21;color:#fff;padding:8px 14px;border-radius:999px;font-size:.9rem;font-weight:700;margin-top:12px}
+    .hero-right{background:#0d2f63;color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:center;text-align:center}
+    .hero-right h3{margin:0;font-size:1.3rem;text-transform:uppercase;letter-spacing:.07em}
+    .hero-right strong{display:block;font-size:2.2rem;margin:14px 0;line-height:1.1}
+    .hero-right p{margin:0;font-size:.95rem;opacity:.9}
+    .section{margin-bottom:24px}
+    .section h2{font-size:1.4rem;color:#0c1f36;margin-bottom:14px}
+    .card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 10px 24px rgba(0,0,0,.06)}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:18px}
+    .pill{background:#eef7fc;color:#0c3b5d;padding:10px 14px;border-radius:999px;font-weight:700;font-size:.95rem;width:max-content}
+    .info-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+    .info-list li{display:flex;gap:12px;align-items:flex-start;font-size:.96rem;color:#1d3247}
+    .info-list li span{color:#0b4d74;font-size:1.15rem;line-height:1}
+    .register-btn{display:inline-block;background:#d9282f;color:#fff;padding:14px 22px;border-radius:10px;text-decoration:none;font-weight:700;transition:transform .18s ease,box-shadow .18s ease}
+    .register-btn:hover{transform:translateY(-1px);box-shadow:0 12px 24px rgba(217,40,47,.24)}
+    .who-grid{display:grid;grid-template-columns:repeat(3,minmax(160px,1fr));gap:14px}
+    .who-card{background:#f4fbff;border:1px solid #dbeff8;border-radius:14px;padding:16px;text-align:center;font-size:.95rem;color:#0b3b58}
+    .who-card strong{display:block;margin-top:8px}
+    .contact-block{display:grid;gap:12px}
+    .contact-block a{color:#0d2f63;text-decoration:none;font-weight:700}
+    .footer{padding:18px 20px;text-align:center;color:#5a6d7b;font-size:.88rem}
+    @media(max-width:860px){.hero-grid{grid-template-columns:1fr}.who-grid{grid-template-columns:1fr 1fr}.hero-right{padding:22px}} 
+    @media(max-width:600px){.hero-left,.hero-right{padding:20px}.hero-right strong{font-size:1.75rem}.grid{grid-template-columns:1fr}.who-grid{grid-template-columns:1fr}.header h1{font-size:1.4rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Public Health Academy</h1>
+    <p>Empowering Excellence in Public Health Education</p>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <span class="badge">You're Invited</span>
+          <h2>United Kingdom Healthcare Practitioners</h2>
+          <p>Join us for a 3-day international Healthcare Practitioners Symposium focused on advancing global health through collaboration, innovation, and professional excellence.</p>
+          <p class="pill">Theme: Advancing Global Health Through Collaboration, Innovation, and Professional Excellence</p>
+        </div>
+        <div class="hero-right">
+          <h3>3-Day International Symposium</h3>
+          <strong>Global Impact. Lasting Change.</strong>
+          <p>Connect with healthcare leaders, regulators and practitioners from the United Kingdom, South Africa and beyond.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="card">
+        <h2>Upcoming Event</h2>
+        <div class="grid" style="margin-bottom:18px">
+          <div><strong>Date:</strong> 20 - 22 April 2026</div>
+          <div><strong>Time:</strong> 08:00 - 16:30 daily</div>
+          <div><strong>Location:</strong> Virtual (Zoom)</div>
+          <div><strong>Registration Fee:</strong> £1,000 per person</div>
+          <div><strong>CPD Points:</strong> TBD</div>
+        </div>
+        <div class="info-list">
+          <li><span>•</span> Expert-led presentations and interactive workshops</li>
+          <li><span>•</span> Global networking opportunities</li>
+          <li><span>•</span> Evidence-based solutions and panel discussions</li>
+          <li><span>•</span> Certificate of participation awarded</li>
+          <li><span>•</span> CPD points and professional development</li>
+        </div>
+        <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <a class="register-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfTEO4m7eByKGcjc-8Qg20qdSvf2wtmkk2JcuZtpJXjxf9xIg/viewform?usp=header" target="_blank" rel="noopener">Register Now</a>
+          <span style="font-size:.95rem;color:#3f576c;max-width:520px">Click the button to open the registration form and secure your seat for the symposium.</span>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="card">
+        <h2>Who Should Attend?</h2>
+        <div class="who-grid">
+          <div class="who-card"><strong>Medical Doctor</strong></div>
+          <div class="who-card"><strong>Psychologist</strong></div>
+          <div class="who-card"><strong>Occupational Therapist</strong></div>
+          <div class="who-card"><strong>Physiotherapist</strong></div>
+          <div class="who-card"><strong>Speech Therapist</strong></div>
+          <div class="who-card"><strong>Social Worker</strong></div>
+          <div class="who-card"><strong>Optometrist</strong></div>
+          <div class="who-card"><strong>Dentist</strong></div>
+          <div class="who-card"><strong>Environmental Health Practitioner</strong></div>
+          <div class="who-card"><strong>Dietician</strong></div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="card">
+        <h2>Banking Details</h2>
+        <div class="info-list">
+          <li><span>•</span> Account Holder: Public Health Academy</li>
+          <li><span>•</span> Bank: Standard Bank of South Africa</li>
+          <li><span>•</span> Branch: Eastgate</li>
+          <li><span>•</span> Branch Code: 008505</li>
+          <li><span>•</span> Account Type: Current</li>
+          <li><span>•</span> Account Number: 10 26 052 472 5</li>
+          <li><span>•</span> SWIFT Code: SBZAZAJ</li>
+          <li><span>•</span> Reference: Symposium Registration – Your Name</li>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="card contact-block">
+        <h2>Enquiries</h2>
+        <a href="mailto:sbongumenzi.n@gmail.com">sbongumenzi.n@gmail.com</a>
+        <a href="mailto:sbongumenzi.n@icloud.com">sbongumenzi.n@icloud.com</a>
+        <a href="tel:+27768129564">+27 76 812 9564 (WhatsApp available)</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">© 2025 Public Health Academy. All rights reserved.</footer>
+</body>
+</html><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Public Health Academy - CPD Accredited Public Health Education</title>
   <meta name="description" content="Public Health Academy provides CPD-accredited education and training for healthcare professionals. Led by Mr. Sbongumenzi Sithole, Environmental Health Practitioner with advanced qualifications.">
