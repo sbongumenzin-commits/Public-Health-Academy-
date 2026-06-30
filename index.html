@@ -2,128 +2,214 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Public Health Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Health Academy - CPD Accredited Public Health Education</title>
+  <meta name="description" content="Public Health Academy provides CPD-accredited education and training for healthcare professionals. Led by Mr. Sbongumenzi Sithole, Environmental Health Practitioner with advanced qualifications.">
+  <meta name="keywords" content="public health, CPD accredited, healthcare education, environmental health, professional development, South Africa">
+  <meta name="author" content="Public Health Academy">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="google-site-verification" content="dkUMleA-MJjbW9YDvvCyMBsJVzZ4VGL8irDAFBPEJHo" />
+  <link rel="canonical" href="https://publichealthacademy.netlify.app/">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b2735;background:#f5f8fb}
-    header{background:#08283d;color:#fff;padding:32px 20px;text-align:center}
-    header h1{margin:0;font-size:2rem;letter-spacing:0.05em}
-    header p{margin:10px 0 0;font-size:1rem;opacity:.9}
-    main{max-width:1100px;margin:0 auto;padding:20px}
-    .hero{background:#fff;border-radius:18px;box-shadow:0 18px 40px rgba(0,0,0,.08);overflow:hidden;margin-bottom:24px}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:0;align-items:center}
-    .hero-left{padding:30px 28px}
-    .hero-left h2{margin-top:0;font-size:1.7rem;color:#0c1f36}
-    .hero-left p{margin:18px 0 0;line-height:1.75;color:#233a4e}
-    .badge{display:inline-block;background:#dd1b21;color:#fff;padding:8px 14px;border-radius:999px;font-size:.9rem;font-weight:700;margin-top:12px}
-    .hero-right{background:#0d2f63;color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:center;text-align:center}
-    .hero-right h3{margin:0;font-size:1.3rem;text-transform:uppercase;letter-spacing:.07em}
-    .hero-right strong{display:block;font-size:2.2rem;margin:14px 0;line-height:1.1}
-    .hero-right p{margin:0;font-size:.95rem;opacity:.9}
-    .section{margin-bottom:24px}
-    .section h2{font-size:1.4rem;color:#0c1f36;margin-bottom:14px}
-    .card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 10px 24px rgba(0,0,0,.06)}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:18px}
-    .pill{background:#eef7fc;color:#0c3b5d;padding:10px 14px;border-radius:999px;font-weight:700;font-size:.95rem;width:max-content}
-    .info-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
-    .info-list li{display:flex;gap:12px;align-items:flex-start;font-size:.96rem;color:#1d3247}
-    .info-list li span{color:#0b4d74;font-size:1.15rem;line-height:1}
-    .register-btn{display:inline-block;background:#d9282f;color:#fff;padding:14px 22px;border-radius:10px;text-decoration:none;font-weight:700;transition:transform .18s ease,box-shadow .18s ease}
-    .register-btn:hover{transform:translateY(-1px);box-shadow:0 12px 24px rgba(217,40,47,.24)}
-    .who-grid{display:grid;grid-template-columns:repeat(3,minmax(160px,1fr));gap:14px}
-    .who-card{background:#f4fbff;border:1px solid #dbeff8;border-radius:14px;padding:16px;text-align:center;font-size:.95rem;color:#0b3b58}
-    .who-card strong{display:block;margin-top:8px}
-    .contact-block{display:grid;gap:12px}
-    .contact-block a{color:#0d2f63;text-decoration:none;font-weight:700}
-    .footer{padding:18px 20px;text-align:center;color:#5a6d7b;font-size:.88rem}
-    @media(max-width:860px){.hero-grid{grid-template-columns:1fr}.who-grid{grid-template-columns:1fr 1fr}.hero-right{padding:22px}} 
-    @media(max-width:600px){.hero-left,.hero-right{padding:20px}.hero-right strong{font-size:1.75rem}.grid{grid-template-columns:1fr}.who-grid{grid-template-columns:1fr}.header h1{font-size:1.4rem}}
+    /* Poster-inspired colors and icon sizing */
+    .cpd-badge{background:#1f6365;color:#fff;padding:6px 8px;border-radius:6px;font-weight:700}
+    .event-card{border-left:4px solid #1f6365;padding:16px}
+    .event-details p{margin:6px 0}
+    .event-header h3{margin:0}
+    .meta-icon{width:18px;height:18px;vertical-align:middle;margin-right:8px;fill:#06504f}
+    .register-btn{background:#0b6;color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none}
+    @media(max-width:600px){
+      .event-card{padding:12px}
+      .event-details{font-size:0.95em}
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Public Health Academy</h1>
-    <p>Empowering Excellence in Public Health Education</p>
-  </header>
-  <main>
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-left">
-          <span class="badge">Welcome</span>
-          <h2>Public Health Academy</h2>
-          <p>We provide CPD-accredited education and professional development for healthcare practitioners, with a focus on sustainable public health systems and career growth.</p>
-          <p class="pill">Empowering healthcare professionals through evidence-based learning and collaboration.</p>
-        </div>
-        <div class="hero-right">
-          <h3>CPD Education & Training</h3>
-          <strong>Professional Development for Practitioners</strong>
-          <p>Learn from experienced educators and connect with peers across multiple health disciplines.</p>
-        </div>
+
+<div class="live-url-banner">
+  🌐 Live at: <a href="https://publichealthacademy.netlify.app" target="_blank">publichealthacademy.netlify.app</a>
+</div>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <img src="images/logo-optimized.png" class="logo" alt="Public Health Academy logo">
+    </div>
+    <div class="site-title">
+      <h1>Public Health Academy</h1>
+      <p>Empowering Excellence in Public Health Education</p>
+    </div>
+  </div>
+</header>
+
+<section class="about">
+  <h2>About the Academy</h2>
+  <p>
+    The Public Health Academy is a CPD-accredited institution dedicated to empowering healthcare 
+    professionals through evidence-based education, professional development, and innovative training 
+    in public health and environmental health practice.
+  </p>
+</section>
+
+<section class="vision">
+  <h2>Our Vision</h2>
+  <ul>
+    <li>To be a leading institution in providing professional public health education</li>
+    <li>Empower healthcare professionals to drive sustainable health systems</li>
+    <li>Improve community well‑being through life‑long learning</li>
+  </ul>
+</section>
+
+<section class="mission">
+  <h2>Our Mission</h2>
+  <p>
+    To provide high‑quality, CPD‑accredited education and training that enhances the competence,
+    confidence, and career growth of healthcare professionals through innovative and 
+    evidence-based training programmes.
+  </p>
+</section>
+
+<section class="values">
+  <h2>Our Core Values</h2>
+  <ul>
+    <li><strong>Excellence:</strong> Upholding the highest standards in training and educating.</li>
+    <li><strong>Integrity:</strong> Acting ethically and with transparency in all practices.</li>
+    <li><strong>Innovation:</strong> Embracing creativity and continuous improvement.</li>
+    <li><strong>Impact:</strong> Transforming communities through knowledge and action.</li>
+  </ul>
+</section>
+
+<section class="services">
+  <h2>Our Services</h2>
+  <ul>
+    <li><strong>CPD-Accredited Training Programs:</strong> Comprehensive courses in public health, environmental health, and related fields, accredited for continuing professional development.</li>
+    <li><strong>Professional Development Workshops:</strong> Interactive sessions designed to enhance skills and knowledge for healthcare professionals across various disciplines.</li>
+    <li><strong>Public Health Symposiums:</strong> Annual events bringing together experts and practitioners to discuss the latest trends and innovations in public health.</li>
+    <li><strong>Online Learning Modules:</strong> Flexible, self-paced online courses accessible from anywhere, covering specialized topics in health practice.</li>
+    <li><strong>Conducting Baseline Studies and Research:</strong> Performing baseline studies and other research work for organisations and individuals to inform decision-making and development.</li>
+    <li><strong>Environmental Impact Assessments (EIA):</strong> Conducting EIA for upcoming and existing structures to ensure environmental compliance and sustainability.</li>
+    <li><strong>Environmental Health Services and Trainings:</strong> Providing environmental health related services and trainings to private food and OHS industries to promote safety and compliance.</li>
+    <li><strong>Consulting Services:</strong> Expert advice for healthcare organizations on policy development, program implementation, and compliance.</li>
+  </ul>
+</section>
+
+<section class="services extra-classes">
+  <h2>A Branch From Our Main</h2>
+  <h3>Grade 10, 11 & 12 Extra Classes</h3>
+  <div class="event-card">
+    <div class="event-header">
+      <h3>Maths, Physical Sciences, Life Sciences & Geography Extra Classes</h3>
+      <span class="cpd-badge">Grade 10, 11 & 12</span>
+    </div>
+    <div class="event-details">
+      <p><svg class="meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10h10v2H7zM7 6h10v2H7zM7 14h6v2H7z"/></svg><strong>Duration:</strong> 2 February 2026 - 30 November 2026</p>
+      <p><svg class="meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8V12L14.5 13.75L15.25 12.5L13 11.25V8zM19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM19 19H5V5h14v14z"/></svg><strong>Format:</strong> Online Only</p>
+    </div>
+    <div class="event-description">
+      <p><strong>Class Schedule:</strong></p>
+      <ul>
+        <li>Friday: 19:00 - 23:00</li>
+        <li>Saturday: 16:00 - 22:00</li>
+        <li>Sunday: 16:00 - 22:00</li>
+      </ul>
+      <p><strong>Subjects Offered:</strong> Maths, Physical Sciences, Life Sciences & Geography</p>
+      <p>Secure your spot today and boost academic performance!</p>
+    </div>
+    <div class="bank">
+      <strong>Fees</strong>
+      <div>
+        All Subjects (Maths, Physical Sciences, Life Sciences & Geography): <strong>R1880.00 per month per learner</strong>
       </div>
-    </section>
-    <section class="section">
-      <div class="card">
-        <h2>Upcoming Event</h2>
-        <div class="grid" style="margin-bottom:18px">
-          <div><strong>Date:</strong> 9 - 11 November 2026</div>
-          <div><strong>Time:</strong> 10:00 - 18:00 SAST</div>
-          <div><strong>Location:</strong> Virtual (Zoom)</div>
-          <div><strong>Registration Fee:</strong> £480 per person</div>
-        </div>
-        <div class="info-list">
-          <li><span>•</span> Expert-led presentations and interactive workshops</li>
-          <li><span>•</span> Global networking opportunities</li>
-          <li><span>•</span> Evidence-based solutions and panel discussions</li>
-          <li><span>•</span> Certificate of participation awarded</li>
-          <li><span>•</span> Professional development and career growth</li>
-        </div>
-        <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
-          <a class="register-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfTEO4m7eByKGcjc-8Qg20qdSvf2wtmkk2JcuZtpJXjxf9xIg/viewform?usp=header" target="_blank" rel="noopener">Register Now</a>
-          <span style="font-size:.95rem;color:#3f576c;max-width:520px">Click the button to open the registration form and secure your seat for the symposium.</span>
-        </div>
+    </div>
+    <div class="bank">
+      <strong>Bank Details</strong>
+      <div>
+        Bank: Standard Bank Business Account (Current)<br>
+        Account Holder: Public Health Academy<br>
+        Branch & Code: Eastgate (018505)<br>
+        Account Number: 10260524725
       </div>
-    </section>
-    <section class="section">
-      <div class="card">
-        <h2>Who Should Attend?</h2>
-        <div class="who-grid">
-          <div class="who-card"><strong>Medical Doctor</strong></div>
-          <div class="who-card"><strong>Psychologist</strong></div>
-          <div class="who-card"><strong>Occupational Therapist</strong></div>
-          <div class="who-card"><strong>Physiotherapist</strong></div>
-          <div class="who-card"><strong>Speech Therapist</strong></div>
-          <div class="who-card"><strong>Social Worker</strong></div>
-          <div class="who-card"><strong>Optometrist</strong></div>
-          <div class="who-card"><strong>Dentist</strong></div>
-          <div class="who-card"><strong>Environmental Health Practitioner</strong></div>
-          <div class="who-card"><strong>Dietician</strong></div>
-        </div>
+    </div>
+    <div class="event-actions">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgx0PEwRzB0VJ0MTvvm21lgcNEUUZVjXBLIMmmLUubT2oYvw/viewform?usp=header" target="_blank" class="register-btn">Enquire / Register</a>
+      <span style="margin-left:12px;font-size:0.95em">(Please pay via bank transfer and include your student number as the payment reference.)</span>
+      <div style="margin-top:12px;font-size:0.95em;color:#333;background:#f9f9f9;padding:12px;border-radius:6px;border-left:4px solid #1f6365">
+        <strong>Registration Requirements:</strong> Grade 10, 11 and 12 learners must provide the following information when registering:
+        <ul style="margin:8px 0 0 0;padding-left:20px">
+          <li>Full Name</li>
+          <li>Surname</li>
+          <li>School Name</li>
+          <li>Grade (10, 11 or 12)</li>
+        </ul>
       </div>
-    </section>
-    <section class="section">
-      <div class="card">
-        <h2>Banking Details</h2>
-        <div class="info-list">
-          <li><span>•</span> Account Holder: Public Health Academy</li>
-          <li><span>•</span> Bank: Standard Bank of South Africa</li>
-          <li><span>•</span> Branch: Eastgate</li>
-          <li><span>•</span> Branch Code: 008505</li>
-          <li><span>•</span> Account Type: Current</li>
-          <li><span>•</span> Account Number: 10 26 052 472 5</li>
-          <li><span>•</span> SWIFT Code: SBZAZAJ</li>
-          <li><span>•</span> Reference: Symposium Registration – Your Name</li>
-        </div>
+    </div>
+  </div>
+</section>
+
+<section class="events">
+  <h2>Past Events</h2>
+  <div class="event-card">
+      <div class="event-header">
+        <h3>Public Health CPD-Accredited Symposium</h3>
+        <span class="cpd-badge">22 CPD Points (15 Clinical + 7 Ethics)</span>
       </div>
-    </section>
-    <section class="section">
-      <div class="card contact-block">
-        <h2>Enquiries</h2>
-        <a href="mailto:sbongumenzi.n@gmail.com">sbongumenzi.n@gmail.com</a>
-        <a href="mailto:sbongumenzi.n@icloud.com">sbongumenzi.n@icloud.com</a>
-        <a href="tel:+27768129564">+27 76 812 9564 (WhatsApp available)</a>
+      <div class="event-details">
+        <p><svg class="meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10h10v2H7zM7 6h10v2H7zM7 14h6v2H7z"/></svg><strong>Date:</strong> 20 - 22 April 2026</p>
+        <p><svg class="meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8V12L14.5 13.75L15.25 12.5L13 11.25V8zM19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM19 19H5V5h14v14z"/></svg><strong>Time:</strong> 8:00 AM - 4:30 PM (daily)</p>
+        <p><svg class="meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5 2.5 2.5 0 0112 11.5z"/></svg><strong>Location:</strong> Virtual (Zoom)</p>
+        <p><svg class="meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6z"/></svg><strong>Registration Fee:</strong> R480</p>
       </div>
-    </section>
-  </main>
-  <footer class="footer">© 2025 Public Health Academy. All rights reserved.</footer>
-  </body>
-  </html>
+    <div class="event-description">
+      <p><strong>Inviting Professionals In:</strong></p>
+      <ul>
+        <li>All Healthcare Practitioners Registered with HPCSA (Health Professions Council of South Africa): Medical Practitioners, Dentists, Pharmacists, Physiotherapists, Occupational Therapists, Dietitians, Psychologists, Speech-Language Therapists and Audiologists, Optometrists, Podiatrists, Radiographers, Clinical Technologists, Emergency Care Practitioners, Medical Scientists, and other allied health professions.</li>
+        <li>All Healthcare Practitioners Registered with SACSSP (South African Council for Social Service Professions): Social Workers, Social Auxiliary Workers.</li>
+      </ul>
+      <p>Unlock your potential through CPD-accredited sessions and expert-led discussions.</p>
+    </div>
+    <div class="bank">
+      <strong>Bank details</strong>
+      <div>
+        Bank: Standard Bank<br>
+        Account Name: Public Health Academy<br>
+        Account Number: 10260524725<br>
+        Branch Code: 018505
+      </div>
+    </div>
+    <div class="event-actions">
+      <span class="register-btn" style="pointer-events:none; opacity:0.6; cursor:not-allowed;">Registration Closed</span>
+      <span style="margin-left:12px;font-size:0.95em; color:#b22222;">This past event is closed and registration is no longer available.</span>
+    </div>
+  </div>
+</section>
+
+<section class="ceo">
+  <h2>Chief Education Officer</h2>
+  <div class="ceo-inner">
+    <img src="images/ceo-square.jpg" class="ceo-photo" alt="Sbongumenzi Sithole">
+    <div class="ceo-bio">
+      <h3>Mr. Sbongumenzi Sithole</h3>
+      <p>
+        Mr. Sbongumenzi Sithole is a practicing Environmental Health Practitioner (EHP) with advanced
+        qualifications in Environmental Health and Public Health, including a National Diploma
+        (Mangosuthu University of Technology), B-Tech (University of Johannesburg), Postgraduate Diploma
+        (University of KwaZulu Natal), and Master’s Degree (University of Johannesburg). With extensive
+        professional and academic experience, he leads the design and delivery of accredited CPD programmes
+        that equip healthcare professionals with up‑to‑date knowledge and practical skills.
+      </p>
+      <p>
+        Email: <a href="mailto:sbongumenzi.n@gmail.com">sbongumenzi.n@gmail.com</a><br>
+        Call: <a href="tel:+27768129564">076 812 9564</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Public Health Academy. All rights reserved.
+</footer>
+
+</body>
+</html>
